@@ -1,0 +1,14 @@
+.call-to-action {
+    background-color: #f4f4f4; /* Choose a light color that contrasts well with your text */
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .call-to-action h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Style your button to stand out */
+  
