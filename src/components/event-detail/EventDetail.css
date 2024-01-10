@@ -1,0 +1,14 @@
+.event-detail {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  
+  .event-detail img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  /* Add more styles to format the text, layout, etc. */
+  

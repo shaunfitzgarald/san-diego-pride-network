@@ -1,0 +1,62 @@
+.navbar {
+    background-image: url(../../assets/navbar-background.png);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #yourBackgroundColor;
+    padding: 0 20px;
+  }
+  
+  .navbar__logo img {
+    height: 85px; /* Adjust as per your logo's aspect ratio */
+    width: auto;
+  }
+  
+  .navbar__navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Spacing between nav items */
+  }
+  
+  .navbar__navigation a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar__navigation a:hover {
+    color: hotpink;
+  }
+  
+  .search-button, .donate-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .donate-button {
+    background-color: cerulean;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .donate-button:hover {
+    background-color: yellow;
+  }
+  
+  /* Add responsive design rules */
+  @media (max-width: 768px) {
+    .navbar__navigation ul {
+      flex-direction: column;
+      /* Additional styles for mobile nav */
+    }
+  
+    .navbar__search-donate {
+      /* Additional styles for mobile buttons */
+    }
+  }
+  

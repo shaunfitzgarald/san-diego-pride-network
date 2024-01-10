@@ -1,0 +1,33 @@
+.event-card {
+    width: 300px; /* Or whatever width you prefer */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Simple shadow for depth */
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .event-card:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+  }
+  
+  .event-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .event-info {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .event-info h3 {
+    margin: 0.5rem 0;
+  }
+  
+  .event-info p {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  /* Adjust padding, margins, and colors as needed */
+  
