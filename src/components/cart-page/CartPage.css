@@ -1,0 +1,21 @@
+/* CartPage.css */
+.cart-page {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .cart-item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .cart-total {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    text-align: right;
+  }
+  

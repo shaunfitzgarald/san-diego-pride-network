@@ -1,14 +1,62 @@
+
+/* EventDetail.css */
+
 .event-detail {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1rem;
-  }
-  
-  .event-detail img {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.event-detail img {
     width: 100%;
     height: auto;
     margin-bottom: 1rem;
   }
   
-  /* Add more styles to format the text, layout, etc. */
+.event-detail h2 {
+  color: #ff6347;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.event-detail p {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.event-detail button {
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.event-detail button:hover {
+  background-color: #ff4500;
+}
+
+.event-detail div {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.event-detail div p {
+  margin: 0;
+}
+
+.event-detail div:last-child {
+  margin-bottom: 0;
+}
   

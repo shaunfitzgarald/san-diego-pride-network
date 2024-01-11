@@ -1,0 +1,90 @@
+.tickets-page {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.tickets-page h1 {
+  text-align: center;
+  color: #d63384;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.form-group input[type="number"],
+.form-group select,
+.form-group input[type="radio"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input[type="radio"] {
+  width: auto;
+}
+
+.form-group button {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  background-color: #d63384;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-group button:hover {
+  background-color: #c7206c;
+}
+
+/* Radio button labels alignment */
+.radio-labels {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Style adjustments for radio buttons and their labels */
+.radio-labels label {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.radio-labels input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+/* Ensures the select dropdown and the quantity input are on the same line on larger screens */
+@media (min-width: 768px) {
+  .select-quantity-group {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .select-quantity-group > div {
+    flex: 1;
+    margin-right: 1rem;
+  }
+
+  .select-quantity-group > div:last-child {
+    margin-right: 0;
+  }
+}
