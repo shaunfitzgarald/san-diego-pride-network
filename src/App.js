@@ -12,7 +12,11 @@ import WhatWeDo from './components/what-we-do/WhatWeDo';
 import About from './components/about/About';
 import GetInvolved from './components/get-involved/GetInvolved';
 import CartPage from './components/cart-page/CartPage';
+import Checkout from './components/checkout/Checkout';
+import Calendar from './components/calendar-page/CalendarPage';
+import HeroShowPage from './components/hero-show-page/HeroShowPage';
 import './App.css';
+
 
 function App() {
   return (
@@ -32,10 +36,13 @@ function App() {
             <Route path="/tickets" element={<Tickets />} />
             <Route path="/events" element={<Events />} />
             <Route path="/events/:id" element={<EventDetail />} />
+            <Route path="/calendar" element={<Calendar />} />
             <Route path="/what-we-do" element={<WhatWeDo />} />
             <Route path="/about" element={<About />} />
             <Route path="/get-involved" element={<GetInvolved />} />
+            <Route path="/learn-more" component={HeroShowPage} />
             <Route path="/cart" element={<CartPage />} />
+            <Route path="/checkout" element={<Checkout />} />
             {/* Fallback route */}
             <Route path="*" element={<div>Page not found</div>} />
           </Routes>

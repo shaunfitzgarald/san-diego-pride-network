@@ -32,71 +32,88 @@ const Tickets = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const eventObj = mockEvents.find(event => event.id === selectedEvent);
-    const ticketObj = eventObj.ticketTypes.find(ticket => ticket.type === selectedTicketType);
-
+    const eventObj = mockEvents.find(e => e.id === selectedEvent);
+  
+    // Find the selected ticket object. Ensure it exists before proceeding.
+    const ticketObj = eventObj?.ticketTypes.find(ticket => ticket.type === selectedTicketType);
+  
+    if (!ticketObj) {
+      console.error('Selected ticket type not found');
+      return; // Optionally, you can display a user-friendly error message here
+    }
+  
+    // Handle price, whether it's 'Free' or a numerical value
+    let price = ticketObj.price;
+    if (typeof price === 'string' && price.toLowerCase() === 'free') {
+      price = 0;
+    }
+  
     const itemToAdd = {
       id: selectedEvent + ticketObj.type,
       name: `${eventObj.name} - ${ticketObj.type}`,
-      price: ticketObj.price,
+      price: price,
       quantity: parseInt(quantity),
     };
-
+  
     addItemToCart(itemToAdd);
-
-    // Alert with the ticket information
-    alert(`Added to cart: ${quantity} x ${ticketObj.type} for ${eventObj.name} at $${ticketObj.price} each.`);
+  
+    // Alert to confirm addition to the cart
+    alert(`Added to cart: ${quantity} x ${ticketObj.type} for ${eventObj.name} at ${price === 0 ? 'Free' : '$' + price} each.`);
   };
+  
 
   const selectedEventObj = mockEvents.find(event => event.id === selectedEvent);
 
   return (
-    <div className="tickets-page">
-      <h1>Buy Tickets</h1>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="event-select">Choose an event:</label>
-          <select id="event-select" value={selectedEvent} onChange={handleEventChange}>
-            {mockEvents.map(event => (
-              <option key={event.id} value={event.id}>
-                {event.name} - {event.date}
-              </option>
-            ))}
-          </select>
-        </div>
+    <div>
+      <div className="tickets-banner">TICKETS</div>
+        <div className="tickets-page">
+          <h1>Buy Tickets</h1>
+          <form onSubmit={handleSubmit}>
+            <div className="form-group">
+              <label htmlFor="event-select">Choose an event:</label>
+              <select id="event-select" value={selectedEvent} onChange={handleEventChange}>
+                {mockEvents.map(event => (
+                  <option key={event.id} value={event.id}>
+                    {event.name} - {event.date}
+                  </option>
+                ))}
+              </select>
+            </div>
 
-        <div className="form-group radio-labels">
-          {selectedEventObj && selectedEventObj.ticketTypes.map(ticketType => (
-            <label key={ticketType.type} className="ticket-type-label">
+            <div className="form-group radio-labels">
+              {selectedEventObj && selectedEventObj.ticketTypes.map(ticketType => (
+                <label key={ticketType.type} className="ticket-type-label">
+                  <input
+                    type="radio"
+                    name="ticketType"
+                    value={ticketType.type}
+                    checked={selectedTicketType === ticketType.type}
+                    onChange={handleTicketTypeChange}
+                  />
+                  {ticketType.type} - ${ticketType.price}
+                </label>
+              ))}
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="quantity">Quantity:</label>
               <input
-                type="radio"
-                name="ticketType"
-                value={ticketType.type}
-                checked={selectedTicketType === ticketType.type}
-                onChange={handleTicketTypeChange}
+                type="number"
+                id="quantity"
+                name="quantity"
+                value={quantity}
+                onChange={handleQuantityChange}
+                min="1"
+                required
               />
-              {ticketType.type} - ${ticketType.price}
-            </label>
-          ))}
-        </div>
+            </div>
 
-        <div className="form-group">
-          <label htmlFor="quantity">Quantity:</label>
-          <input
-            type="number"
-            id="quantity"
-            name="quantity"
-            value={quantity}
-            onChange={handleQuantityChange}
-            min="1"
-            required
-          />
+            <div className="form-group">
+              <button type="submit">Add to Cart</button>
+            </div>
+          </form>
         </div>
-
-        <div className="form-group">
-          <button type="submit">Add to Cart</button>
-        </div>
-      </form>
     </div>
   );
 };

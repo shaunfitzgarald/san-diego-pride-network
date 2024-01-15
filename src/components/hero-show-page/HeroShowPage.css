@@ -1,0 +1,62 @@
+
+/* HeroShowPage.css */
+.hero-show-page {
+    background-image: url('../../assets/hero-show-background.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+}
+
+.hero-show-content {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent backdrop for content */
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.hero-show-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-show-content p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.button-learn-more, .button-buy-tickets {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-learn-more {
+    background-color: #ff4081; /* Vibrant pink color */
+}
+
+.button-buy-tickets {
+    background-color: #4caf50; /* Vibrant green color */
+}
+
+.button-learn-more:hover {
+    background-color: #e91e63; /* Darker shade for hover state */
+}
+
+.button-buy-tickets:hover {
+    background-color: #388e3c; /* Darker shade for hover state */
+}

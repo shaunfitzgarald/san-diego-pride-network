@@ -1,3 +1,4 @@
+import { type } from '@testing-library/user-event/dist/type';
 import mockEvent1Image from '../../assets/mock-images/mock-event1.png';
 import mockEvent2Image from '../../assets/mock-images/mock-event2.png';
 import mockEvent3Image from '../../assets/mock-images/mock-event3.png';
@@ -259,7 +260,7 @@ const mockEvents = [
       price: 'Free entry, books for purchase',
       tags: ['books', 'literature', 'fair', 'authors'],
       image: mockEvent7Image,
-      ticketTypes: [],
+      ticketTypes: [{ type: 'General Admission', price: 0}],
       capacity: 3000,
       attendees: 1500,
       isOnline: false,
@@ -330,7 +331,7 @@ const mockEvents = [
       price: 'Free',
       tags: ['art', 'crafts', 'festival', 'workshops', 'family'],
       image: mockEvent9Image,
-      ticketTypes: [],
+      ticketTypes: [{ type: 'General Admission', price: 0}],
       capacity: 3000,
       attendees: 500,
       isOnline: false,

@@ -1,79 +1,189 @@
-.navbar {
-    background-image: url(../../assets/navbar-background.png);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #yourBackgroundColor;
-    padding: 0 20px;
-  }
-  
-  .navbar__logo img {
-    height: 85px; /* Adjust as per your logo's aspect ratio */
-    width: auto;
-  }
-  
-  .navbar__navigation ul {
-    list-style: none;
-    display: flex;
-    gap: 20px; /* Spacing between nav items */
-  }
-  
-  .navbar__navigation a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-  
-  .navbar__navigation a:hover {
-    color: hotpink;
-  }
-  
-  .search-button, .donate-button {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-  }
-  
-  .donate-button {
-    background-color: cerulean;
-    padding: 10px 20px;
-    color: #fff;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  
-  .donate-button:hover {
-    background-color: yellow;
-  }
-  
-  /* Add responsive design rules */
-  @media (max-width: 768px) {
-    .navbar__navigation ul {
-      flex-direction: column;
-      /* Additional styles for mobile nav */
-    }
-  
-    .navbar__search-donate {
-      /* Additional styles for mobile buttons */
-    }
+/* NavBar.css */
 
-    .cart-icon {
-      position: relative;
-      cursor: pointer;
-    }
-    
-    .item-count {
-      position: absolute;
-      top: -10px;
-      right: -10px;
-      background-color: red;
-      color: white;
-      border-radius: 50%;
-      padding: 2px 6px;
-      font-size: 0.8rem;
-    }
-    
+.navbar {
+  background-image: url(../../assets/navbar-background.png);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 100;
+  position: relative; /* Add this to establish a positioning context */
+}
+
+.navbar__logo img {
+  height: auto;
+  max-height: 85px;
+}
+
+.navbar__navigation ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding-left: 0;
+}
+
+.navbar__navigation a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.navbar__navigation a:hover {
+  color: #ff4081;
+}
+
+.search-container {
+  position: relative; /* This also needs a positioning context */
+  z-index: 1000; /* High z-index to ensure it stacks on top */
+}
+
+/* Ensure that the dropdown does not go beyond the width of the parent container */
+.search-container .search-results {
+  width: calc(100% - 2px); /* Adjust width if you have border */
+}
+
+/* Search input field */
+.search-input {
+  padding: 10px;
+  border: 2px solid #d63384;
+  border-radius: 20px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+
+.search-input:focus {
+  border-color: #ff4081;
+  outline: none;
+  }
+
+
+  
+  /* Search results dropdown */
+  .search-results-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  z-index: 5;
+  overflow: hidden;
   }
   
+  /* Show the search results dropdown */
+  .search-results-dropdown.show {
+  display: block;
+  }
+  
+  /* Individual search result item */
+  .search-result-item {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+  transition: background-color 0.2s;
+  }
+  
+  .search-result-item:hover {
+  background-color: #f7f7f7;
+  color: #d63384;
+  }
+  
+  /* Styling for the last search result item */
+  .search-result-item:last-child {
+  border-bottom: none;
+  }
+  
+  /* Styling for vibrant hover effect on buttons */
+  .donate-button:hover {
+  background-color: #ff4081;
+  }
+  
+  /* Responsive navbar adjustments */
+  @media (max-width: 768px) {
+  .navbar__navigation ul {
+  flex-direction: column;
+  background-color: #fff;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: none;
+  }
+  
+  .navbar__navigation ul.active {
+  display: flex;
+  }
+  
+  .menu-icon {
+  display: none;
+  }
+  
+  .menu-icon.active + .navbar__navigation ul {
+  display: flex;
+  }
+  }
+
+/* Make the search bar and donate button sit side by side */
+.navbar__search-donate {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Add space between search bar and donate button */
+}
+
+/* Style the donate button with a fun, vibrant look */
+.donate-button {
+  background-color: #ff4081; /* Fun, vibrant pink */
+  color: white; /* White text for contrast */
+  padding: 10px 20px; /* Padding for a larger click area */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Change cursor to indicate button */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Change the background color on hover for the donate button */
+.donate-button:hover {
+  background-color: #c7206c; /* A slightly darker shade of pink on hover */
+}
+
+/* Position the cart icon to the far right */
+/* Style the cart icon with a background */
+.navbar__cart-icon {
+  margin-left: auto; /* Push the cart icon to the far right */
+  position: relative; /* Position relative to place the item count correctly */
+  background-color: #ff4081; /* Fun, vibrant background color */
+  padding: 10px; /* Padding around the cart icon */
+  border-radius: 50%; /* Circular background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow for depth */
+  display: flex; /* Use flex layout */
+  justify-content: center; /* Center icon horizontally */
+  align-items: center; /* Center icon vertically */
+  cursor: pointer; /* Change cursor to indicate clickable area */
+}
+
+/* Adjust the size of the cart icon as needed */
+.navbar__cart-icon img {
+  width: 24px; /* Example size, adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.search-results {
+  position: absolute;
+  top: 100%; /* Position it right below the search input */
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc; /* Optional border */
+  border-radius: 0 0 4px 4px; /* Round bottom corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 300px; /* Limit the height and make it scrollable */
+  overflow-y: auto; /* Scrollable */
+  z-index: 1000; /* Ensure it's above other content */
+}

@@ -11,10 +11,10 @@ const REMOVE_ITEM = 'REMOVE_ITEM';
 const cartReducer = (state, action) => {
   switch (action.type) {
     case ADD_ITEM:
-      // Add item to cart or update quantity if it already exists
+      // Add item to cart. Could also implement a check to combine items with the same ID
       return { ...state, items: [...state.items, action.payload] };
     case REMOVE_ITEM:
-      // Remove item from cart by filtering it out
+      // Remove item from cart by filtering it out based on ID
       return { ...state, items: state.items.filter(item => item.id !== action.payload.id) };
     default:
       return state;

@@ -1,5 +1,7 @@
 import React from 'react';
-import './HeroSection.css'; // Make sure to create this CSS file
+import { Link } from 'react-router-dom';
+import HeroShowPage from '../hero-show-page/HeroShowPage';
+import './HeroSection.css';
 
 const HeroSection = () => {
   return (
@@ -8,7 +10,9 @@ const HeroSection = () => {
       <div className="hero-text">
         <h1>SD PRIDE 2024</h1>
         <p>July 13-21</p>
-        <button>Learn More</button>
+        <Link to="../hero-show-page/HeroShowPage.js"> {/* Update the to attribute to your desired path */}
+          <button className="learn-more-button">Learn More</button>
+        </Link>
       </div>
     </div>
   );

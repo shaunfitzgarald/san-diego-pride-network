@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom'; 
 import mockEvents from '../mock-data/mockEvents';
 import './EventDetail.css';
 
@@ -38,7 +39,9 @@ const EventDetail = () => {
       <p>{event.description}</p>
       <p>Pricing: {event.price}</p>
       <p>Ticket Types:</p>
-      <button onClick={() => setShowTickets(!showTickets)}>View tickets</button> {/* New button */}
+      <button className="event-detail__button event-detail__button--view-tickets" onClick={() => setShowTickets(!showTickets)}>
+        View tickets
+      </button> {/* New button */}
       {showTickets && ( // Only show the ticket types if showTickets is true
         <ul>
           {event.ticketTypes.map((ticket, index) => (
@@ -48,10 +51,15 @@ const EventDetail = () => {
           ))}
         </ul>
       )}
+        <Link to={`/tickets?event=${event.id}`} className="event-detail__button event-detail__button--tickets">
+          Buy Tickets
+        </Link>
       <p>Number of attendees: {event.attendees}</p>
       <p>Capacity: {event.capacity}</p>
       <p>Age Restriction: {event.ageRestriction}</p>
-      <button onClick={() => setShowReviews(!showReviews)}>Click to see reviews</button>
+      <button className="event-detail__button event-detail__button--see-reviews" onClick={() => setShowReviews(!showReviews)}>
+        Click to see reviews
+        </button>
       {showReviews && (
         <div>
           <h2>Reviews:</h2>
@@ -73,6 +81,15 @@ const EventDetail = () => {
           <li>{option}</li>
         ))}
       </ul>
+      <Link to={`/calendar?date=${event.date}`} className="event-detail__button event-detail__button--calendar">
+        Go to Calendar
+      </Link>
+      {/* <div className="event-detail__actions">
+        <Link to={`/events/${event.id}`} className="event-detail__button event-detail__button--details">
+          View Details
+        </Link>
+      </div> */}
+
     </div>
   );
 };
