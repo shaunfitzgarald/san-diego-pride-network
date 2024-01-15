@@ -1,0 +1,135 @@
+/* NavBar.css */
+
+.navbar {
+    background-image: url(../../assets/navbar-background.png);
+    display: flex;
+    justify-content: space-between; /* Adjust if necessary to fit all items */
+    align-items: center;
+    padding: 0 20px;
+    z-index: 100; /* Ensure the navbar is above other elements */
+  }
+  
+  .navbar__logo img {
+    height: auto;
+    max-height: 85px; /* Adjust based on your logo's aspect ratio */
+  }
+  
+  .navbar__navigation {
+    display: flex;
+    align-items: center; /* Align links vertically */
+  }
+  
+  .navbar__navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Spacing between nav items */
+    padding-left: 0; /* Remove default padding */
+  }
+  
+  .navbar__navigation a {
+    text-decoration: none;
+    color: white; /* Ensure this contrasts with the background */
+    font-weight: bold;
+    padding: 10px; /* Add padding for clickability */
+  }
+  
+  .navbar__navigation a:hover {
+    color: #ff4081; /* Vibrant color for hover state */
+  }
+  
+  /* ... (rest of your styles) ... */
+  
+  @media (max-width: 768px) {
+    /* Adjust styles for mobile view */
+    .navbar__navigation ul {
+      flex-direction: column;
+      background-color: #fff; /* Background for mobile nav */
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      display: none; /* Hide by default */
+    }
+  
+    .navbar__navigation ul.active {
+      display: flex; /* Show when menu icon is clicked */
+    }
+  
+    /* Style for a menu icon if you have one for mobile */
+    .menu-icon {
+      display: none; /* Only show on mobile */
+      cursor: pointer;
+    }
+  
+    .menu-icon.active + .navbar__navigation ul {
+      display: flex; /* Show navigation when menu icon is active */
+    }
+  }
+  
+  /* NavBar.css */
+  .search-container {
+    position: relative;
+  }
+  
+  .search-input {
+    /* Styling for the search input */
+  }
+  
+  .search-results-dropdown {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    z-index: 5;
+    overflow: hidden; /* Ensures the border radius applies to children */
+    }
+    
+    .search-results-dropdown.show {
+    display: block; /* Show when there are results */
+    }
+    
+    .search-result-item {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    background-color: #ffffff; /* White background */
+    border-bottom: 1px solid #eeeeee; /* Light border for each item */
+    transition: background-color 0.2s;
+    }
+    
+    .search-result-item:hover {
+    background-color: #f7f7f7; /* Light grey background on hover */
+    color: #d63384; /* Change color on hover */
+    }
+    
+    /* Add vibrant hover effects for buttons */
+    .donate-button:hover {
+    background-color: #ff4081; /* Vibrant pink color */
+    }
+    
+    /* Ensuring the last search result item does not have a border at the bottom */
+    .search-result-item:last-child {
+    border-bottom: none;
+    }
+    
+    /* Extra styling to make the search input more vibrant */
+    .search-input {
+    border: 2px solid #d63384; /* Vibrant border color */
+    padding: 10px;
+    border-radius: 20px; /* Circular borders */
+    font-size: 16px;
+    transition: border-color 0.2s;
+    }
+    
+    .search-input:focus {
+    border-color: #ff4081; /* Change border color on focus */
+    outline: none;
+    }
+    
+    
+  

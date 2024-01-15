@@ -1,0 +1,47 @@
+/* CartPage.css */
+.cart-page {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .cart-dropdown {
+    position: absolute;
+    right: 0;
+    top: 58px; /* Adjust based on your navbar's height */
+    width: 240px; /* Ensure this width doesn't push the dropdown off-screen */
+    background-color: white; /* Ensure text color contrasts with this background */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Shadow should not affect visibility */
+    z-index: 1000; /* Ensure this is above all other page content */
+    display: flex; /* Or 'block', if you're not using flex properties */
+    flex-direction: column;
+    padding: 20px;
+    overflow: visible; /* Check if 'auto' was hiding content */
+  }
+
+  .cart-items {
+    height: 240px; /* Ensure this height shows all items, or make it auto */
+    overflow-y: auto; /* If you have many items, this allows scrolling */
+    /* If items aren't showing, try 'overflow-y: visible;' */
+  }
+
+  .cart-item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; /* Ensure margins aren't too large, hiding content */
+  }
+
+  .cart-dropdown-button {
+    margin-top: auto; /* This pushes the button to the bottom of the dropdown */
+    /* Rest of your styles */
+  }
+  
+  .cart-total {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    text-align: right;
+  }
+  

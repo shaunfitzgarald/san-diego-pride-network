@@ -1,0 +1,62 @@
+.events-page {
+    width: 100vw;
+    overflow-x: hidden;
+    /* Add any additional styling for the page */
+  }
+  
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .events-banner {
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+    background-color: #333; /* Or any color that fits your design */
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .events-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px; /* This increases space between the cards */
+    padding: 1rem;
+    margin: 0 auto; /* Centers the grid in the available space */
+    max-width: 1200px; /* Or any max-width that suits your design */
+    box-sizing: border-box; /* Ensures padding doesn't affect the overall width */
+  }  
+  
+  .event-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .event-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Adjust as needed */
+  }
+  
+  .event-info {
+    padding: 1rem;
+  }
+  
+  .event-info h3 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .event-date,
+  .event-location {
+    color: #666;
+    font-size: 0.9rem;
+  }
+  

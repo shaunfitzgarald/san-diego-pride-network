@@ -1,14 +1,69 @@
-.event-detail {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1rem;
-  }
-  
-  .event-detail img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 1rem;
-  }
-  
-  /* Add more styles to format the text, layout, etc. */
-  
+/* EventDetail.css */
+
+/* ... other styles ... */
+
+.event-detail__actions {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  align-items: center; /* Center buttons */
+}
+
+.event-detail__button {
+  background-color: #ff4081; /* Default vibrant pink color for all buttons */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Specific color for View Details button */
+.event-detail__button--details {
+  background-color: #32CD32; /* Vibrant green */
+}
+
+/* Specific color for Buy Tickets button */
+.event-detail__button--tickets {
+  background-color: #1E90FF; /* Vibrant blue */
+}
+
+/* Specific color for View Tickets button */
+.event-detail__button--view-tickets {
+  background-color: #FFA500; /* Vibrant orange */
+}
+
+/* Specific color for See Reviews button */
+.event-detail__button--see-reviews {
+  background-color: #FFC0CB; /* Vibrant pink */
+}
+
+.event-detail__button:hover {
+  transform: scale(1.05); /* Fun hover effect to slightly enlarge the buttons */
+  background-color: #E91E63; /* Change to a slightly darker shade when hovered */
+}
+
+/* Add specific hover styles for each button if needed */
+.event-detail__button--details:hover {
+  background-color: #2E8B57; /* Darker green when hovered */
+}
+
+.event-detail__button--tickets:hover {
+  background-color: #187bcd; /* Darker blue when hovered */
+}
+
+.event-detail__button--view-tickets:hover {
+  background-color: #FF8C00; /* Darker orange when hovered */
+}
+
+.event-detail__button--see-reviews:hover {
+  background-color: #FF69B4; /* Darker pink when hovered */
+}
+
+/* Ensure that the last button doesn't have a bottom margin */
+.event-detail__button:last-child {
+  margin-bottom: 0;
+}

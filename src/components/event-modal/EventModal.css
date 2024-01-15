@@ -1,0 +1,61 @@
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+  
+  .modal {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* White text color */
+    margin-right: 10px; /* Add some space between the buttons */
+}
+  
+.view-details-button {
+    background-color: #21D4FD; /* Vibrant blue */
+}
+  
+.buy-tickets-button {
+    background-color: #B621FE; /* Vibrant purple */
+}
+ 
+.modal-actions {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Add some space below the action buttons */
+}
+  
+.close-button {
+    background-color: #FF5252; /* A vibrant red for the close button */
+    color: white;
+    margin-left: 10px; /* Add some space between the close button and other buttons */
+    padding: 10px 20px; /* Consistent padding with other buttons */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    /* other styles you want for the button */
+}
+  
+  
+  
