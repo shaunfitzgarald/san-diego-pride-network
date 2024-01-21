@@ -1,4 +1,3 @@
-// CartDropdown.js
 import React from 'react';
 import { useCart } from '../cart-context/CartContext'; 
 import { Link } from 'react-router-dom';

@@ -3,7 +3,7 @@
 .navbar {
     background-image: url(../../assets/navbar-background.png);
     display: flex;
-    justify-content: space-between; /* Adjust if necessary to fit all items */
+    justify-content: space-between; 
     align-items: center;
     padding: 0 20px;
     z-index: 100; /* Ensure the navbar is above other elements */
@@ -11,7 +11,7 @@
   
   .navbar__logo img {
     height: auto;
-    max-height: 85px; /* Adjust based on your logo's aspect ratio */
+    max-height: 85px; 
   }
   
   .navbar__navigation {
@@ -28,7 +28,7 @@
   
   .navbar__navigation a {
     text-decoration: none;
-    color: white; /* Ensure this contrasts with the background */
+    color: white; 
     font-weight: bold;
     padding: 10px; /* Add padding for clickability */
   }
@@ -37,10 +37,8 @@
     color: #ff4081; /* Vibrant color for hover state */
   }
   
-  /* ... (rest of your styles) ... */
-  
   @media (max-width: 768px) {
-    /* Adjust styles for mobile view */
+
     .navbar__navigation ul {
       flex-direction: column;
       background-color: #fff; /* Background for mobile nav */
@@ -55,7 +53,6 @@
       display: flex; /* Show when menu icon is clicked */
     }
   
-    /* Style for a menu icon if you have one for mobile */
     .menu-icon {
       display: none; /* Only show on mobile */
       cursor: pointer;
@@ -66,7 +63,6 @@
     }
   }
   
-  /* NavBar.css */
   .search-container {
     position: relative;
   }

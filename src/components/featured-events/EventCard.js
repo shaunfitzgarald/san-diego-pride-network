@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './EventCard.css'; // Assuming you have a CSS file for EventCard
+import './EventCard.css'; 
 
 const EventCard = ({ event }) => {
   return (
     <div className="event-card">
-      {/* Wrap the content with Link to make the whole card clickable */}
       <Link to={`/events/${event.id}`} className="event-link">
         <img src={event.image} alt={event.name} className="event-image" />
         <div className="event-info">

@@ -53,7 +53,6 @@ const NavBar = () => {
         </ul>
       </nav>
       <div className="navbar__search-donate">
-        {/* Search input */}
         <div className="search-container">
           <input
             type="text"
@@ -62,7 +61,6 @@ const NavBar = () => {
             onChange={handleInputChange}
             className="search-input"
           />
-          {/* Search results dropdown */}
           {searchTerm && (
             <ul className="search-results">
               {searchResults.map(event => (

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { useCart } from '../cart-context/CartContext'; // Update this path to where your CartContext is
+import { useCart } from '../cart-context/CartContext'; 
 import mockEvents from '../mock-data/mockEvents';
 import './Tickets.css';
 
 const Tickets = () => {
-  const { addItemToCart } = useCart(); // Use the cart context
+  const { addItemToCart } = useCart(); 
   const [selectedEvent, setSelectedEvent] = useState(mockEvents[0].id);
   const [selectedTicketType, setSelectedTicketType] = useState(mockEvents[0].ticketTypes[0].type);
   const [quantity, setQuantity] = useState(1);
@@ -34,7 +34,7 @@ const Tickets = () => {
     event.preventDefault();
     const eventObj = mockEvents.find(e => e.id === selectedEvent);
   
-    // Find the selected ticket object. Ensure it exists before proceeding.
+    // Finds the selected ticket object. Ensures it exists before proceeding.
     const ticketObj = eventObj?.ticketTypes.find(ticket => ticket.type === selectedTicketType);
   
     if (!ticketObj) {
@@ -42,7 +42,7 @@ const Tickets = () => {
       return; // Optionally, you can display a user-friendly error message here
     }
   
-    // Handle price, whether it's 'Free' or a numerical value
+    // Handles price, whether it's 'Free' or a numerical value
     let price = ticketObj.price;
     if (typeof price === 'string' && price.toLowerCase() === 'free') {
       price = 0;
@@ -57,7 +57,7 @@ const Tickets = () => {
   
     addItemToCart(itemToAdd);
   
-    // Alert to confirm addition to the cart
+    // Alert to confirm additions to the cart
     alert(`Added to cart: ${quantity} x ${ticketObj.type} for ${eventObj.name} at ${price === 0 ? 'Free' : '$' + price} each.`);
   };
   

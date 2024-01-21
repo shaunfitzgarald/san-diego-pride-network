@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Logo from '../../assets/logo.png';
 import CartIcon from '../cart-icon/CartIcon';
 import CartDropdown from '../cart-dropdown/CartDropdown';
-import SearchBar from '../search-bar/SearchBar'; // Ensure you have a SearchBar component
+import SearchBar from '../search-bar/SearchBar'; 
 import './NavBar.css';
 
 const NavBar = () => {

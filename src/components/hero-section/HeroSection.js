@@ -10,7 +10,7 @@ const HeroSection = () => {
       <div className="hero-text">
         <h1>SD PRIDE 2024</h1>
         <p>July 13-21</p>
-        <Link to="../hero-show-page/HeroShowPage.js"> {/* Update the to attribute to your desired path */}
+        <Link to="../hero-show-page/HeroShowPage.js"> 
           <button className="learn-more-button">Learn More</button>
         </Link>
       </div>

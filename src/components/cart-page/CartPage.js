@@ -1,4 +1,3 @@
-// CartPage.js
 import React from 'react';
 import { useCart } from '../cart-context/CartContext'; 
 import { useNavigate } from 'react-router-dom';

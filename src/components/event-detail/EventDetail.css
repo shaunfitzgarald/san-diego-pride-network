@@ -1,7 +1,4 @@
 /* EventDetail.css */
-
-/* ... other styles ... */
-
 .event-detail__actions {
   display: flex;
   flex-direction: column; /* Stack buttons vertically */

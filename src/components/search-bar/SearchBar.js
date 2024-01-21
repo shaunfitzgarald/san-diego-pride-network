@@ -1,6 +1,5 @@
-// SearchBar.js
 import React, { useState } from 'react';
-import './SearchBar.css'; // Make sure to create a corresponding CSS file
+import './SearchBar.css'; 
 
 const SearchBar = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -10,8 +9,8 @@ const SearchBar = ({ onSearch }) => {
   };
 
   const handleSearch = (event) => {
-    event.preventDefault(); // Prevent the form from refreshing the page
-    onSearch(searchTerm); // This function would be passed as a prop
+    event.preventDefault(); 
+    onSearch(searchTerm); 
   };
 
   return (

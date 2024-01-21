@@ -1,5 +1,5 @@
 .event-card {
-    width: 300px; /* Or whatever width you prefer */
+    width: 300px; 
     box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Simple shadow for depth */
     margin-bottom: 1rem;
     transition: transform 0.3s ease-in-out;

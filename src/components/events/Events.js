@@ -1,7 +1,7 @@
 import React from 'react';
-import mockEvents from '../mock-data/mockEvents'; // Ensure this is the correct path to your mockEvents data
-import './Events.css'; // This will be your CSS file for styling the events page
-import EventCard from '../featured-events/EventCard'; // Assuming you have an EventCard component
+import mockEvents from '../mock-data/mockEvents'; 
+import './Events.css'; 
+import EventCard from '../featured-events/EventCard'; 
 
 const Events = () => {
   return (

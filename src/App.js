@@ -21,7 +21,7 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <CartProvider> {/* Wrap your application in CartProvider */}
+      <CartProvider> 
         <div className="App">
           <NavBar />
           <Routes>
@@ -40,10 +40,9 @@ function App() {
             <Route path="/what-we-do" element={<WhatWeDo />} />
             <Route path="/about" element={<About />} />
             <Route path="/get-involved" element={<GetInvolved />} />
-            <Route path="/learn-more" component={HeroShowPage} />
+            <Route path="/hero-show-page" component={HeroShowPage} />
             <Route path="/cart" element={<CartPage />} />
             <Route path="/checkout" element={<Checkout />} />
-            {/* Fallback route */}
             <Route path="*" element={<div>Page not found</div>} />
           </Routes>
         </div>

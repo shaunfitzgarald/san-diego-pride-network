@@ -1,5 +1,3 @@
-/* NavBar.css */
-
 .navbar {
   background-image: url(../../assets/navbar-background.png);
   display: flex;
@@ -7,7 +5,7 @@
   align-items: center;
   padding: 0 20px;
   z-index: 100;
-  position: relative; /* Add this to establish a positioning context */
+  position: relative; 
 }
 
 .navbar__logo img {
@@ -38,9 +36,8 @@
   z-index: 1000; /* High z-index to ensure it stacks on top */
 }
 
-/* Ensure that the dropdown does not go beyond the width of the parent container */
 .search-container .search-results {
-  width: calc(100% - 2px); /* Adjust width if you have border */
+  width: calc(100% - 2px); 
 }
 
 /* Search input field */
@@ -136,7 +133,6 @@
   gap: 10px; /* Add space between search bar and donate button */
 }
 
-/* Style the donate button with a fun, vibrant look */
 .donate-button {
   background-color: #ff4081; /* Fun, vibrant pink */
   color: white; /* White text for contrast */
@@ -148,13 +144,10 @@
   transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
-/* Change the background color on hover for the donate button */
 .donate-button:hover {
   background-color: #c7206c; /* A slightly darker shade of pink on hover */
 }
 
-/* Position the cart icon to the far right */
-/* Style the cart icon with a background */
 .navbar__cart-icon {
   margin-left: auto; /* Push the cart icon to the far right */
   position: relative; /* Position relative to place the item count correctly */
@@ -168,7 +161,6 @@
   cursor: pointer; /* Change cursor to indicate clickable area */
 }
 
-/* Adjust the size of the cart icon as needed */
 .navbar__cart-icon img {
   width: 24px; /* Example size, adjust as needed */
   height: auto; /* Maintain aspect ratio */

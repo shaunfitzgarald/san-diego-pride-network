@@ -1,10 +1,9 @@
-// CalendarPage.js
 import React, { useState, useEffect } from 'react';
 import FullCalendar from '@fullcalendar/react';
 import { useLocation } from 'react-router-dom';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction'; // for clickable events
-import mockEvents from '../mock-data/mockEvents'; // Update the path to the actual location
+import mockEvents from '../mock-data/mockEvents'; 
 import moment from 'moment';
 import EventModal from '../event-modal/EventModal'
 import './CalendarPage.css';

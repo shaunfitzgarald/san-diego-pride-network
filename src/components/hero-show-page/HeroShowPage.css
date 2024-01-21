@@ -1,7 +1,7 @@
 
 /* HeroShowPage.css */
 .hero-show-page {
-    background-image: url('../../assets/hero-show-background.png'); /* Replace with your image path */
+    background-image: url('../../assets/hero-show-background.png');
     background-size: cover;
     background-position: center;
     height: 100vh;
