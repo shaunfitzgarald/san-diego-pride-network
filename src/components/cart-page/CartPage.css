@@ -1,10 +1,90 @@
 /* CartPage.css */
+
 .cart-page {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
+  background: #f0f8ff; /* Light background for contrast, adjust as needed */
+  max-width: 800px; /* Adjust based on your preference */
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Open Sans', sans-serif; /* This should match your global font style */
+}
+
+.cart-page h1 {
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+  color: #d63384; /* A vibrant color for the header */
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-item div {
+  margin: 5px 0;
+}
+
+.cart-total {
+  text-align: right;
+  font-size: 1.2rem;
+  padding: 15px 0;
+}
+
+.checkout-button {
+  background-color: #32cd32; /* Similar vibrant color as the checkout page button */
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.checkout-button:hover {
+  background-color: #228b22; /* Darker shade on hover */
+}
+
+/* If your cart is empty */
+.cart-page .empty-cart {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #a9a9a9;
+  margin-top: 50px;
+}
+
+/* You may want to add media queries for responsiveness */
+@media (max-width: 768px) {
+  .cart-page {
+    padding: 10px;
   }
   
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .cart-item div {
+    margin: 10px 0;
+  }
+  
+  .checkout-button {
+    padding: 10px 20px;
+  }
+}
+
   .cart-dropdown {
     position: absolute;
     right: 0;
@@ -24,24 +104,9 @@
     overflow-y: auto; /* If you have many items, this allows scrolling */
     /* If items aren't showing, try 'overflow-y: visible;' */
   }
-
-  .cart-item {
-    border-bottom: 1px solid #ccc;
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px; /* Ensure margins aren't too large, hiding content */
-  }
-
+  
   .cart-dropdown-button {
     margin-top: auto; /* This pushes the button to the bottom of the dropdown */
     /* Rest of your styles */
-  }
-  
-  .cart-total {
-    margin-top: 20px;
-    font-size: 1.5rem;
-    text-align: right;
   }
   

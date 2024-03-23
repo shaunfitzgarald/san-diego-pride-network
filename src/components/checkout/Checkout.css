@@ -1,0 +1,140 @@
+/* Add this at the top of your CSS file to import the fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap');
+
+/* Checkout.css */
+
+/* Main layout */
+.checkout-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 20px;
+    gap: 30px; /* Adjust the gap between form and cart summary as needed */
+  }
+  
+  .payment-logos img {
+    height: 40px; /* Adjust to the size that fits your layout */
+    width: auto; /* This will maintain the aspect ratio */
+    object-fit: contain; /* Ensures the image is scaled correctly within the dimensions */
+    object-position: center; /* Centers the image within its container */
+  }
+  
+
+    .payment-logos {
+    /* ... existing styles ... */
+    background-color: #ffffff; /* or any other color that fits your design */
+    padding: 10px;
+    border-radius: 5px; /* Optional: if you want rounded corners */
+    }
+
+  /* Form section */
+  .checkout-form {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .checkout-form h1 {
+    font-family: 'Pacifico', cursive;
+    color: #d63384;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .checkout-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adjust space between inputs */
+  }
+  
+  .checkout-form input {
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .checkout-form button {
+    padding: 15px;
+    background-color: #32cd32; /* Vibrant green color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .checkout-form button:hover {
+    background-color: #228b22;
+  }
+  
+  /* Cart summary section */
+  .cart-summary {
+    flex: 1;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cart-summary h2 {
+    font-family: 'Pacifico', cursive;
+    color: #d63384;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .cart-summary ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .cart-summary li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .cart-summary .totals {
+    font-size: 1rem;
+    margin-top: auto; /* Push totals to the bottom */
+  }
+  
+  .cart-summary .totals div {
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .cart-summary .totals .total {
+    font-weight: bold;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .checkout-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .checkout-form,
+    .cart-summary {
+      width: 100%;
+      max-width: 500px; /* Maximum width on smaller screens */
+      margin-bottom: 20px;
+    }
+  }
+  
