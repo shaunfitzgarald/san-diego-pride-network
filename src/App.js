@@ -15,6 +15,7 @@ import CartPage from './components/cart-page/CartPage';
 import Checkout from './components/checkout/Checkout';
 import Calendar from './components/calendar-page/CalendarPage';
 import HeroShowPage from './components/hero-show-page/HeroShowPage';
+import Donate from './components/donate/Donate';
 import Admin from './components/admin-page/AdminPage';
 import './App.css';
 
@@ -44,6 +45,7 @@ function App() {
             <Route path="/hero-show-page" element={<HeroShowPage />} />
             <Route path="/cart" element={<CartPage />} />
             <Route path="/checkout" element={<Checkout />} />
+            <Route path="/donate" element={<Donate />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="*" element={<div>Page not found</div>} />
           </Routes>

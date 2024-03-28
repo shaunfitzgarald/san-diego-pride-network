@@ -74,7 +74,10 @@ const NavBar = () => {
           )}
         </div>
         
-        <button className="donate-button">
+        <button 
+          className="donate-button"
+          onClick={() => window.location = '/donate'}
+        >
           Donate
         </button>
         <div className="navbar__cart-icon" onClick={toggleCartVisibility}>

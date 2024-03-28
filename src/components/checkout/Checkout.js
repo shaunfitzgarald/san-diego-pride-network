@@ -18,6 +18,8 @@ const Checkout = () => {
     cardNumber: '',
     expiryDate: '', // added field for card expiry date
     cvv: '', // added field for card cvv
+    email: '',
+    phone: '',
     // ... other necessary fields
   });
 
@@ -107,6 +109,31 @@ const Checkout = () => {
             placeholder="CVV" 
             required 
           />
+          <input 
+            type="email" 
+            name="email" 
+            value={formData.email} 
+            onChange={handleChange} 
+            placeholder="Email" 
+            required 
+          />
+          <input
+            type="email"
+            name="re-enter email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Re-enter Email"
+            required
+          />
+          <input 
+            type="text" 
+            name="phone" 
+            value={formData.phone} 
+            onChange={handleChange} 
+            placeholder="Phone Number" 
+            required 
+          />
+
           {/* Add other form fields as necessary */}
           <div className="payment-logos">
             <img src={visaLogo} alt="Visa" />
