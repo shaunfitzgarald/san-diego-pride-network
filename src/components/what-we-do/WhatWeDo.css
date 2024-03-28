@@ -1,0 +1,47 @@
+/* WhatWeDo.css */
+
+.what-we-do {
+    background-color: #fafafa; /* A light background to keep it fresh and clean */
+    color: #333; /* Dark text for readability */
+    padding: 2rem; /* Add some space inside the container */
+    max-width: 1200px; /* Maximum width of the content */
+    margin: 0 auto; /* Center the content */
+    line-height: 1.6; /* Space out the lines for readability */
+  }
+  
+  .what-we-do h1 {
+    color: #d63384; /* A color that stands out, matching the vibrancy of your theme */
+    margin-bottom: 1rem;
+  }
+  
+  .what-we-do h2 {
+    color: #d63384; /* A contrasting color for subheadings */
+    margin-top: 2rem; /* Space before each new section heading */
+  }
+  
+  .what-we-do p {
+    margin-bottom: 1rem; /* Space after each paragraph */
+    font-size: 1.1rem; /* Slightly larger font size for readability */
+  }
+  
+  .what-we-do a {
+    color: #d63384; /* Links are noticeable */
+    text-decoration: none; /* Removes underline from links */
+    font-weight: bold; /* Make links bold to stand out */
+  }
+  
+  .what-we-do a:hover {
+    text-decoration: underline; /* Adds an underline on hover for a clear indication of a link */
+  }
+  
+  /* Responsive design adjustments */
+  @media (max-width: 768px) {
+    .what-we-do {
+      padding: 1rem; /* Smaller padding on smaller screens */
+    }
+  
+    .what-we-do h1, .what-we-do h2 {
+      text-align: center; /* Center headings on smaller screens */
+    }
+  }
+  
