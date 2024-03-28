@@ -1,20 +1,41 @@
+/* FeaturedEvents.css */
+
 .featured-events {
-    padding: 2rem;
-    background-color: #fff; /* Or any color that fits your design */
-  }
-  
-  .featured-events h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-  }
-  
-  .event-list {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  
-  /* Additional styles for the EventCard component */
-  
+  margin: 20px;
+  overflow: hidden; /* Prevents scrolling outside the event list container */
+}
+
+.featured-events h2 {
+  text-align: center;
+  font-size: 2em;
+  color: #d63384; /* Customize this with your theme color */
+  margin-bottom: 1rem;
+}
+
+.event-list {
+  display: flex;
+  overflow-x: auto; /* This allows horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* Enables smooth scrolling on touch devices */
+  gap: 20px; /* Adjust the gap between event cards */
+  padding: 20px 0; /* Padding top and bottom */
+}
+
+/* Styles for individual event cards */
+.event-card {
+  flex: 0 0 auto; /* Flex item does not grow, does not shrink, and basis is auto */
+  width: calc(25% - 20px); /* Adjust width for cards, subtract the gap size */
+  margin-right: 20px; /* If you prefer margin instead of gap for older browsers */
+  /* Add styles for box shadow, borders, padding, etc. as per your design */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  border-radius: 8px; /* Rounded corners for cards */
+}
+
+/* Hide scrollbar but still allow scrolling */
+.event-list::-webkit-scrollbar {
+  display: none; /* For Webkit browsers */
+}
+
+.event-list {
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  scrollbar-width: none; /* For Firefox */
+}
