@@ -1,0 +1,32 @@
+/* Footer.css */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap');
+
+.site-footer {
+  background-color: #d63384;
+  color: white;
+  text-align: center;
+  padding: 15px; /* Reduced padding */
+  font-family: 'Roboto', sans-serif;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.site-footer p {
+  font-size: 0.8rem; /* Adjusted font size for more compact look */
+  line-height: 1.4;
+  margin-bottom: 0.3rem; /* Reduced space between paragraphs */
+}
+
+/* Further adjustments for smaller screens if necessary */
+@media (max-width: 768px) {
+  .site-footer p {
+    font-size: 0.7rem; /* Even smaller font size on small devices */
+  }
+
+  .site-footer {
+    padding: 10px; /* Even less padding on small devices */
+  }
+}

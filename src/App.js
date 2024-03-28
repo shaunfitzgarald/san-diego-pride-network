@@ -16,6 +16,7 @@ import Checkout from './components/checkout/Checkout';
 import Calendar from './components/calendar-page/CalendarPage';
 import HeroShowPage from './components/hero-show-page/HeroShowPage';
 import Donate from './components/donate/Donate';
+import Footer from './components/footer/Footer';
 import Admin from './components/admin-page/AdminPage';
 import './App.css';
 
@@ -33,6 +34,7 @@ function App() {
                 <CallToAction />
                 <FeaturedEvents />
                 {/* Additional components */}
+                <Footer />
               </>
             } />
             <Route path="/tickets" element={<Tickets />} />
