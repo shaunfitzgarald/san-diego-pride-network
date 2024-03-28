@@ -1,0 +1,92 @@
+/* Donate.css */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap');
+
+/* Reset margin and padding for all elements to ensure consistent styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Main layout */
+.donation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full height of the viewport */
+  padding: 40px;
+  background-color: #f4f4f7; /* A soothing background color */
+}
+
+/* Donation form styles */
+.donation-form {
+  background-color: #fff;
+  padding: 30px; /* Adjusted padding */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px; /* Maximum width of the form */
+  width: 100%; /* Responsive width */
+}
+
+.donation-form h1 {
+  font-family: 'Pacifico', cursive;
+  color: #d63384;
+  margin-bottom: 30px; /* Space below the title */
+  text-align: center;
+}
+
+.donation-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input field styles */
+.donation-form input,
+.donation-form button {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 15px; /* Spacing between fields */
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+}
+
+/* Adjusting donation amount input for consistent appearance */
+.donation-form input[type="number"] {
+  background: #fff url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><text x="8" y="18" fill="%23666" font-family="Arial" font-size="14">$</text></svg>') no-repeat 10px center;
+  background-size: 20px 20px;
+  padding-left: 35px; /* Adjust this value so the text doesn't overlap the dollar sign */
+}
+
+/* Button styles */
+.donation-form button {
+  background-color: #32cd32;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.donation-form button:hover {
+  background-color: #289c28; /* Slightly darker on hover */
+}
+
+/* Payment logos styles */
+.payment-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.payment-logos img {
+  height: 30px; /* Adjust the size if necessary */
+  margin: 0 10px; /* Space between logos */
+}
+
+@media (max-width: 768px) {
+  .donation-form {
+    padding: 20px;
+    margin: 20px; /* Give some space around the form on smaller screens */
+  }
+}

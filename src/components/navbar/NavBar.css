@@ -151,7 +151,7 @@
 .navbar__cart-icon {
   margin-left: auto; /* Push the cart icon to the far right */
   position: relative; /* Position relative to place the item count correctly */
-  background-color: #ff4081; /* Fun, vibrant background color */
+  background-color: #54ffff; /* Fun, vibrant background color */
   padding: 10px; /* Padding around the cart icon */
   border-radius: 50%; /* Circular background */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow for depth */
