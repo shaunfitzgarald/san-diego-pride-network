@@ -30,8 +30,8 @@ const WhatWeDo = () => {
       </p>
       <p>
         Need assistance with the application or have questions? Our Grants Writer, Nicole Vares, is available to help at  
-        <a href="jason:grants@sdpridenetwork.org">
-          grants@sdpridenetwork.org</a>.
+        <a href="jason:grants@sandiegopridenetwork.org">
+          grants@sandiegopridenetwork.org</a>.
       </p>
     </div>
   );
