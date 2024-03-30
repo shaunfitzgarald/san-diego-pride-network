@@ -1,3 +1,10 @@
+.tickets-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full height of the viewport */
+  justify-content: space-between; /* This will push your header to the top and footer to the bottom */
+}
+
 .tickets-banner {
   text-align: center;
   background-color: #21d4fd; 
@@ -16,6 +23,17 @@
   background: #ffffff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  margin-top: auto; /* This will auto-adjust the margin and center the ticket section vertically */
+  margin-bottom: auto; /* This will also auto-adjust the margin and center the ticket section vertically */
+  width: 100%; /* Or max-width if you want a narrower card */
+  /* Add your desired max-width or width here */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for card effect */
+  border-radius: 10px; /* Rounded corners for the card */
+  /* Any other styling you want for your card */
+  /* Make sure padding is enough to not have content touching the edges */
+  padding: 20px;
+  background-color: #fff; /* Assuming the card background is white */
+  /* Remove any flex-grow property if it exists */
 }
 
 .tickets-page h1 {

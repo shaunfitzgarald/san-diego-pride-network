@@ -1,12 +1,21 @@
 /* WhatWeDo.css */
 
-.what-we-do {
+/* Ensures the container takes at least full viewport height and displays its children in a column */
+.what-we-do-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* The main content area, allowing for growth to fill available space */
+  .what-we-do {
     background-color: #fafafa; /* A light background to keep it fresh and clean */
     color: #333; /* Dark text for readability */
     padding: 2rem; /* Add some space inside the container */
     max-width: 1200px; /* Maximum width of the content */
     margin: 0 auto; /* Center the content */
     line-height: 1.6; /* Space out the lines for readability */
+    flex-grow: 1; /* Allow the container to grow to use up available space */
   }
   
   .what-we-do h1 {
@@ -43,5 +52,10 @@
     .what-we-do h1, .what-we-do h2 {
       text-align: center; /* Center headings on smaller screens */
     }
+  }
+  
+  /* Footer styling to make sure it sticks to the bottom */
+  footer {
+    margin-top: auto; /* Pushes the footer to the bottom */
   }
   

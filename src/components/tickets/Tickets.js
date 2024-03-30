@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useCart } from '../cart-context/CartContext'; 
 import mockEvents from '../mock-data/mockEvents';
+import Footer from '../footer/Footer';
 import './Tickets.css';
 
 const Tickets = () => {
@@ -65,7 +66,7 @@ const Tickets = () => {
   const selectedEventObj = mockEvents.find(event => event.id === selectedEvent);
 
   return (
-    <div>
+    <div className="tickets-container">
       <div className="tickets-banner">TICKETS</div>
         <div className="tickets-page">
           <h1>Buy Tickets</h1>
@@ -114,6 +115,7 @@ const Tickets = () => {
             </div>
           </form>
         </div>
+        <Footer />
     </div>
   );
 };

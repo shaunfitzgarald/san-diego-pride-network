@@ -1,12 +1,22 @@
 /* About.css */
 
 .about-container {
-    background-color: #f2f2f2; /* Light background for the about section */
-    color: #333; /* Dark color for text */
-    padding: 2rem; /* Spacing around the content */
-    max-width: 800px; /* Max width to maintain readable line lengths */
-    margin: auto; /* Centering the container */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+    padding: 2rem;
+    color: #333;
+    margin: auto; /* Center in the viewport */
+    background-image: url(../../assets/rainbow-banner.png);
+    background-position: center;
+    background-size: cover;
+    position: relative; /* For absolute positioning of the footer */
   }
+  
+  .about {
+    flex-grow: 1; /* Grow to use available space, pushes the footer down */
+    /* Rest of your styles for .about */
+  }x-width: 800px; Keep or remove depending on your design */
   
   .about-container h1,
   .about-container h2 {
@@ -20,5 +30,14 @@
     text-align: justify; /* For a polished look */
   }
   
+  .footer {
+    text-align: center; /* Centers the text horizontally */
+    width: 100%; /* Ensures the footer spans the full width */
+    position: absolute; /* Positions the footer at the bottom */
+    bottom: 0; /* Aligns the footer to the bottom */
+    left: 0; /* Aligns the footer to the left side */
+    color: white; /* The color of your footer text */
+    font-size: 0.875rem; /* The size of your footer text */
+  }  
   /* You may want to add styles for links, buttons, or other elements */
   

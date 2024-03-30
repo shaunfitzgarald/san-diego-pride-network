@@ -1,4 +1,20 @@
 /* CalendarPage.css */
+
+.calendar-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure it takes at least the full height of the viewport */
+}
+
+.calendar-page {
+  padding: 20px;
+  flex-grow: 1; /* Make the calendar page grow to fill available space */
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* Add some space before the footer */
+}
+
 .calendar-banner {
     text-align: center;
     background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%); /* Example gradient background */
@@ -7,13 +23,6 @@
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 20px; /* Add some space between the banner and the calendar */
-  }
-    
-.calendar-page {
-    padding: 20px;
-    background-color: #ffffff; /* White background for a clean look */
-    border-radius: 10px; /* Slightly rounded corners for a softer look */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   }
   
   /* Calendar header styling */
