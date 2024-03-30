@@ -16,8 +16,8 @@
   .about {
     flex-grow: 1; /* Grow to use available space, pushes the footer down */
     /* Rest of your styles for .about */
-  }x-width: 800px; Keep or remove depending on your design */
-  
+    max-width: 800px; /*Keep or remove depending on your design */
+  }
   .about-container h1,
   .about-container h2 {
     color: #d63384; /* A vibrant color from your theme */
@@ -26,7 +26,7 @@
   
   .about-container p {
     margin-bottom: 1rem; /* Spacing between paragraphs */
-    line-height: 1.6; /* For readability */
+    line-height: 1.6; /* For reability */
     text-align: justify; /* For a polished look */
   }
   
