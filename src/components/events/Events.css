@@ -60,3 +60,59 @@
     font-size: 0.9rem;
   }
   
+/* Responsive styling for events container */
+@media (max-width: 768px) {
+  .events-container {
+    /* Adjust the grid to stack cards on smaller screens */
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  /* Adjust the banner font size and padding for smaller screens */
+  .events-banner {
+    font-size: 1.5em; /* Smaller font size */
+    padding: 15px 0; /* Less padding */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjustments for mobile phones */
+  .events-banner {
+    font-size: 1.2em; /* Even smaller font size for very small screens */
+    padding: 10px 0; /* Less padding */
+  }
+
+  /* Adjust event card padding and element sizes */
+  .event-card {
+    /* Adjustments to padding, margins, and potentially hide some elements that are not as critical to display */
+  }
+
+  .event-image {
+    height: 150px; /* Smaller image height */
+  }
+
+  .event-info {
+    padding: 0.75rem; /* Smaller padding */
+  }
+
+  .event-info h3 {
+    font-size: 1.1em; /* Adjust font size as needed */
+  }
+
+  .event-date,
+  .event-location {
+    font-size: 0.8rem; /* Smaller font size */
+  }
+}
+
+/* Ensure body and html padding/margin are reset at all sizes to prevent horizontal scroll */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
+/* Considerations for very small screens or unusual aspect ratios */
+@media (max-height: 480px) {
+  /* Adjustments for devices with less vertical space */
+}
