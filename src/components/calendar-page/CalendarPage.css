@@ -89,25 +89,68 @@
     font-family: 'Roboto', sans-serif;
   }
   
-  /* Responsive styling */
-  @media (max-width: 768px) {
-    .fc-header-toolbar {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .fc-toolbar-title {
-      font-size: 1.5rem; /* Smaller title on mobile */
-    }
-  
-    .fc-button-group {
-      width: 100%;
-      justify-content: space-around;
-    }
-  
-    .fc-button-primary {
-      flex-grow: 1;
-      margin: 2px;
-    }
+ /* Responsive styling */
+@media (max-width: 768px) {
+  .calendar-page {
+    padding: 10px; /* Reduce padding for small screens */
   }
+
+  .calendar-banner {
+    font-size: 1.5rem; /* Smaller font size for the banner on mobile */
+    padding: 0.5rem 0; /* Less padding on mobile */
+  }
+
+  /* Adjust the header toolbar styles */
+  .fc-header-toolbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Adjust the title in the header for small screens */
+  .fc-toolbar-title {
+    font-size: 1.2rem; /* Smaller title on mobile */
+    margin-bottom: 10px; /* Add some space below the title */
+  }
+
+  /* Adjust the calendar buttons to stack or scale appropriately */
+  .fc-button-group {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .fc-button-primary {
+    /* Adjust padding and margin for touch-friendliness */
+    padding: 8px 16px;
+    margin: 4px;
+    font-size: 0.9rem; /* Smaller font size for buttons */
+  }
+
+  /* Smaller event font size */
+  .fc-event {
+    font-size: 0.75rem; /* Smaller event font size */
+  }
+
+  /* Reduce the day number font size */
+  .fc-daygrid-day-number {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjustments for even smaller screens like mobile phones */
+  
+  .fc-header-toolbar {
+    /* Optionally hide or reformat toolbar items to fit better on tiny screens */
+  }
+  
+  /* You may want to hide certain elements or change the layout significantly */
+  .fc-button-primary {
+    /* Adjust as necessary for very small screens */
+  }
+  
+  /* If the FullCalendar is too cramped, consider changing to a list view or similar */
+}
+
+/* FullCalendar's own responsiveness might handle a lot of this for you, 
+so tweak as needed based on actual device testing. */
   

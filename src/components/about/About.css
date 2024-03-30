@@ -3,34 +3,39 @@
 .about-container {
     display: flex;
     flex-direction: column;
+    justify-content: center; /* This centers the .about content vertically */
+    align-items: center; /* This centers the .about content horizontally */
     min-height: 100vh; /* Full viewport height */
     padding: 2rem;
-    color: #333;
     margin: auto; /* Center in the viewport */
     background-image: url(../../assets/rainbow-banner.png);
     background-position: center;
     background-size: cover;
     position: relative; /* For absolute positioning of the footer */
-  }
-  
-  .about {
-    flex-grow: 1; /* Grow to use available space, pushes the footer down */
+}
+
+.about {
+    /* Remove flex-grow as we're now centering with justify-content */
+    max-width: 800px; /* Set a max-width for the content */
+    width: 100%; /* Use full width of the container */
     /* Rest of your styles for .about */
-    max-width: 800px; /*Keep or remove depending on your design */
-  }
-  .about-container h1,
-  .about-container h2 {
+}
+
+.about h1,
+.about h2 {
     color: #d63384; /* A vibrant color from your theme */
     margin-bottom: 0.5rem;
-  }
-  
-  .about-container p {
+    text-align: center; /* Center align headers */
+}
+
+.about p {
     margin-bottom: 1rem; /* Spacing between paragraphs */
-    line-height: 1.6; /* For reability */
+    line-height: 1.6; /* For readability */
     text-align: justify; /* For a polished look */
-  }
-  
-  .footer {
+    /* If you want paragraphs centered as well, change 'justify' to 'center' */
+}
+
+.footer {
     text-align: center; /* Centers the text horizontally */
     width: 100%; /* Ensures the footer spans the full width */
     position: absolute; /* Positions the footer at the bottom */
@@ -38,6 +43,15 @@
     left: 0; /* Aligns the footer to the left side */
     color: white; /* The color of your footer text */
     font-size: 0.875rem; /* The size of your footer text */
-  }  
-  /* You may want to add styles for links, buttons, or other elements */
-  
+}
+
+/* Add styles for links, buttons, or other elements as needed */
+
+@media (max-width: 768px) {
+    .about h1,
+    .about h2,
+    .about p {
+        text-align: center; /* Center align all text on smaller screens */
+    }
+    /* Adjust any other responsive styles as needed */
+}
