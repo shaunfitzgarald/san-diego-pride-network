@@ -1,6 +1,10 @@
 /* Footer.css */
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap');
 
+.footer {
+    margin-top: auto; /* This will automatically take up any available space above the footer */
+}
+
 .site-footer {
   background-color: #d63384;
   color: white;

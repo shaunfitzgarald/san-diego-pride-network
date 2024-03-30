@@ -1,9 +1,11 @@
 import React from 'react';
+import Footer from '../footer/Footer';
 import './About.css'; // This is the stylesheet for the About page
 
 const About = () => {
   return (
     <div className="about-container">
+      <div className="about">
       <h1>About San Diego Pride</h1>
       <p>
         San Diego Pride Network was established in 2024, inspired by the legacy of the Stonewall uprising, and has evolved into an independent nonprofit organization. Our roots in social advocacy have flourished into an expansive array of community-driven programs.
@@ -23,7 +25,11 @@ const About = () => {
       <p>
         Get involved and stay updated with San Diego Pride's initiatives. Subscribe for news, updates, and ways you can help us make a difference.
       </p>
+      </div>
       {/* Consider adding a subscription form or link here */}
+      <div className='footer'>
+      <Footer />
+      </div>
     </div>
   );
 };

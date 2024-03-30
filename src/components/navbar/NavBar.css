@@ -1,5 +1,6 @@
 .navbar {
-  background-image: url(../../assets/navbar-background.png);
+  /* background-image: url(../../assets/navbar-background.png); */
+  background-color: rgb(28, 168, 168);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,6 +30,11 @@
 
 .navbar__navigation a:hover {
   color: #ff4081;
+}
+
+.navbar__navigation a,
+.navbar h1, .navbar h2, .navbar h3, .navbar h4, .navbar h5, .navbar h6 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Horizontal shadow, vertical shadow, blur radius, and shadow color */
 }
 
 .search-container {
@@ -101,6 +107,10 @@
   background-color: #ff4081;
   }
   
+  .donate-button, .navbar__cart-icon {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  }
+
   /* Responsive navbar adjustments */
   @media (max-width: 768px) {
   .navbar__navigation ul {
@@ -151,7 +161,7 @@
 .navbar__cart-icon {
   margin-left: auto; /* Push the cart icon to the far right */
   position: relative; /* Position relative to place the item count correctly */
-  background-color: #54ffff; /* Fun, vibrant background color */
+  background-color: #ff85ae; /* Fun, vibrant background color */
   padding: 10px; /* Padding around the cart icon */
   border-radius: 50%; /* Circular background */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow for depth */
