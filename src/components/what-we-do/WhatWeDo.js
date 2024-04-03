@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from '../footer/Footer'
 import './WhatWeDo.css'; // Ensure this CSS file exists and styles the component
 
 const WhatWeDo = () => {
@@ -36,7 +35,6 @@ const WhatWeDo = () => {
             grants@sandiegopridenetwork.org</a>.
         </p>
       </div>
-      <Footer />
     </div>
   );
 };

@@ -65,98 +65,100 @@ const Checkout = () => {
   const total = subtotal + tax;
 
   return (
-    <div className="checkout-container">
-      <div className="checkout-form">
-        <h1>Checkout</h1>
-        <form onSubmit={handleSubmit}>
-          <input 
-            type="text" 
-            name="name" 
-            value={formData.name} 
-            onChange={handleChange} 
-            placeholder="Full Name" 
-            required 
-          />
-          <input 
-            type="text" 
-            name="address" 
-            value={formData.address} 
-            onChange={handleChange} 
-            placeholder="Shipping Address" 
-            required 
-          />
-          <input 
-            type="text" 
-            name="cardNumber" 
-            value={formData.cardNumber} 
-            onChange={handleChange} 
-            placeholder="Card Number" 
-            required 
-          />
-          <input 
-            type="text" 
-            name="expiryDate" 
-            value={formData.expiryDate} 
-            onChange={handleChange} 
-            placeholder="MM/YY" 
-            required 
-          />
-          <input 
-            type="text" 
-            name="cvv" 
-            value={formData.cvv} 
-            onChange={handleChange} 
-            placeholder="CVV" 
-            required 
-          />
-          <input 
-            type="email" 
-            name="email" 
-            value={formData.email} 
-            onChange={handleChange} 
-            placeholder="Email" 
-            required 
-          />
-          <input
-            type="email"
-            name="re-enter email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="Re-enter Email"
-            required
-          />
-          <input 
-            type="text" 
-            name="phone" 
-            value={formData.phone} 
-            onChange={handleChange} 
-            placeholder="Phone Number" 
-            required 
-          />
+    <div className='checkout-page'>
+      <div className="checkout-container">
+        <div className="checkout-form">
+          <h1>Checkout</h1>
+          <form onSubmit={handleSubmit}>
+            <input 
+              type="text" 
+              name="name" 
+              value={formData.name} 
+              onChange={handleChange} 
+              placeholder="Full Name" 
+              required 
+            />
+            <input 
+              type="text" 
+              name="address" 
+              value={formData.address} 
+              onChange={handleChange} 
+              placeholder="Shipping Address" 
+              required 
+            />
+            <input 
+              type="text" 
+              name="cardNumber" 
+              value={formData.cardNumber} 
+              onChange={handleChange} 
+              placeholder="Card Number" 
+              required 
+            />
+            <input 
+              type="text" 
+              name="expiryDate" 
+              value={formData.expiryDate} 
+              onChange={handleChange} 
+              placeholder="MM/YY" 
+              required 
+            />
+            <input 
+              type="text" 
+              name="cvv" 
+              value={formData.cvv} 
+              onChange={handleChange} 
+              placeholder="CVV" 
+              required 
+            />
+            <input 
+              type="email" 
+              name="email" 
+              value={formData.email} 
+              onChange={handleChange} 
+              placeholder="Email" 
+              required 
+            />
+            <input
+              type="email"
+              name="re-enter email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Re-enter Email"
+              required
+            />
+            <input 
+              type="text" 
+              name="phone" 
+              value={formData.phone} 
+              onChange={handleChange} 
+              placeholder="Phone Number" 
+              required 
+            />
 
-          {/* Add other form fields as necessary */}
-          <div className="payment-logos">
-            <img src={visaLogo} alt="Visa" />
-            <img src={mastercardLogo} alt="Mastercard" />
-            <img src={discoverLogo} alt="Discover" />
-            <img src={amexLogo} alt="American Express" />
+            {/* Add other form fields as necessary */}
+            <div className="payment-logos">
+              <img src={visaLogo} alt="Visa" />
+              <img src={mastercardLogo} alt="Mastercard" />
+              <img src={discoverLogo} alt="Discover" />
+              <img src={amexLogo} alt="American Express" />
+            </div>
+            <button type="submit">Place Order</button>
+          </form>
+        </div>
+        <div className="cart-summary">
+          <h2>Cart Summary</h2>
+          <ul>
+            {cart.items.map(item => (
+              <li key={item.id}>
+                {item.name} - {item.quantity} x ${item.price.toFixed(2)}
+              </li>
+            ))}
+          </ul>
+          <div className="totals">
+            <div>Subtotal: ${subtotal.toFixed(2)}</div>
+            <div>Tax: ${tax.toFixed(2)}</div>
+            <div>Total: ${total.toFixed(2)}</div>
           </div>
-          <button type="submit">Place Order</button>
-        </form>
-      </div>
-      <div className="cart-summary">
-        <h2>Cart Summary</h2>
-        <ul>
-          {cart.items.map(item => (
-            <li key={item.id}>
-              {item.name} - {item.quantity} x ${item.price.toFixed(2)}
-            </li>
-          ))}
-        </ul>
-        <div className="totals">
-          <div>Subtotal: ${subtotal.toFixed(2)}</div>
-          <div>Tax: ${tax.toFixed(2)}</div>
-          <div>Total: ${total.toFixed(2)}</div>
         </div>
       </div>
     </div>

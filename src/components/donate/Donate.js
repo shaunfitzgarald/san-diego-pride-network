@@ -31,68 +31,70 @@ const Donate = () => {
   };
 
   return (
-    <div className="donation-container">
-      <div className="donation-form">
-        <h1>Support Our Cause</h1>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            placeholder="Full Name"
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="Email Address"
-            required
-          />
-          <input
-            type="text"
-            name="cardNumber"
-            value={formData.cardNumber}
-            onChange={handleChange}
-            placeholder="Card Number"
-            required
-          />
-          <input
-            type="text"
-            name="expiryDate"
-            value={formData.expiryDate}
-            onChange={handleChange}
-            placeholder="MM/YY"
-            required
-          />
-          <input
-            type="text"
-            name="cvv"
-            value={formData.cvv}
-            onChange={handleChange}
-            placeholder="CVV"
-            required
-          />
-          <input
-            type="number"
-            name="amount"
-            value={donationAmount}
-            onChange={handleAmountChange}
-            placeholder="Donation Amount"
-            required
-          />
-          <div className="payment-logos">
-            <img src={visaLogo} alt="Visa" />
-            <img src={mastercardLogo} alt="Mastercard" />
-            <img src={discoverLogo} alt="Discover" />
-            <img src={amexLogo} alt="American Express" />
-          </div>
-          <button type="submit">Donate Now</button>
-        </form>
+    <div className='donate-page'>
+      <div className="donation-container">
+        <div className="donation-form">
+          <h1>Support Our Cause</h1>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Full Name"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Email Address"
+              required
+            />
+            <input
+              type="text"
+              name="cardNumber"
+              value={formData.cardNumber}
+              onChange={handleChange}
+              placeholder="Card Number"
+              required
+            />
+            <input
+              type="text"
+              name="expiryDate"
+              value={formData.expiryDate}
+              onChange={handleChange}
+              placeholder="MM/YY"
+              required
+            />
+            <input
+              type="text"
+              name="cvv"
+              value={formData.cvv}
+              onChange={handleChange}
+              placeholder="CVV"
+              required
+            />
+            <input
+              type="number"
+              name="amount"
+              value={donationAmount}
+              onChange={handleAmountChange}
+              placeholder="Donation Amount"
+              required
+            />
+            <div className="payment-logos">
+              <img src={visaLogo} alt="Visa" />
+              <img src={mastercardLogo} alt="Mastercard" />
+              <img src={discoverLogo} alt="Discover" />
+              <img src={amexLogo} alt="American Express" />
+            </div>
+            <button type="submit">Donate Now</button>
+          </form>
+        </div>
       </div>
-    </div>
+\    </div>
   );
 };
 

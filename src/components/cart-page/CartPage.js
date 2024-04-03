@@ -21,29 +21,31 @@ const CartPage = () => {
   const totalPrice = cart.items.reduce((total, item) => total + item.price * item.quantity, 0);
 
   return (
-    <div className="cart-page">
-      <h1>Shopping Cart</h1>
-      {cart.items.length > 0 ? (
-        <div>
-          {cart.items.map((item, index) => (
-            <div key={index} className="cart-item">
-              <div>{item.name}</div>
-              <div>Quantity: {item.quantity}</div>
-              <div>Price: ${item.price}</div>
-              <button onClick={() => handleRemoveItem(item.id)}>Remove</button>
+    <div className='cart-page'>
+      <div className="cart-container">
+        <h1>Shopping Cart</h1>
+        {cart.items.length > 0 ? (
+          <div>
+            {cart.items.map((item, index) => (
+              <div key={index} className="cart-item">
+                <div>{item.name}</div>
+                <div>Quantity: {item.quantity}</div>
+                <div>Price: ${item.price}</div>
+                <button onClick={() => handleRemoveItem(item.id)}>Remove</button>
+              </div>
+            ))}
+            <div className="cart-total">
+              Total: ${totalPrice.toFixed(2)}
             </div>
-          ))}
-          <div className="cart-total">
-            Total: ${totalPrice.toFixed(2)}
-          </div>
-            <button onClick={goToCheckout} className="checkout-button">
-                Proceed to Checkout
-            </button>
+              <button onClick={goToCheckout} className="checkout-button">
+                  Proceed to Checkout
+              </button>
 
-        </div>
-      ) : (
-        <div>Your cart is empty.</div>
-      )}
+          </div>
+        ) : (
+          <div>Your cart is empty.</div>
+        )}
+      </div>
     </div>
   );
 };

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useCart } from '../cart-context/CartContext'; 
 import mockEvents from '../mock-data/mockEvents';
-import Footer from '../footer/Footer';
 import './Tickets.css';
 
 const Tickets = () => {
@@ -115,7 +114,6 @@ const Tickets = () => {
             </div>
           </form>
         </div>
-        <Footer />
     </div>
   );
 };
