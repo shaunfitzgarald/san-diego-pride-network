@@ -34,7 +34,6 @@ function App() {
                 <CallToAction />
                 <FeaturedEvents />
                 {/* Additional components */}
-                <Footer />
               </>
             } />
             <Route path="/tickets" element={<Tickets />} />
@@ -53,6 +52,7 @@ function App() {
           </Routes>
         </div>
       </CartProvider>
+      <Footer />
     </Router>
   );
 }

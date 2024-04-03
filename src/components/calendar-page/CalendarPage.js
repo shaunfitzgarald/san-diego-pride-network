@@ -6,7 +6,6 @@ import interactionPlugin from '@fullcalendar/interaction'; // for clickable even
 import mockEvents from '../mock-data/mockEvents'; 
 import moment from 'moment';
 import EventModal from '../event-modal/EventModal'
-import Footer from '../footer/Footer';
 import './CalendarPage.css';
 
 // Function to transform event data
@@ -82,7 +81,6 @@ const CalendarPage = () => {
         />
         {modalOpen && <EventModal event={selectedEvent} onClose={handleCloseModal} />}
       </div>
-      <Footer />
     </div>
   );
 };

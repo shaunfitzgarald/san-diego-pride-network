@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from '../footer/Footer';
 import './About.css'; // This is the stylesheet for the About page
 
 const About = () => {
@@ -28,7 +27,6 @@ const About = () => {
       </div>
       {/* Consider adding a subscription form or link here */}
       <div className='footer'>
-      <Footer />
       </div>
     </div>
   );

@@ -48,8 +48,8 @@ const NavBar = () => {
           <li><Link to="/events">Events</Link></li>
           <li><Link to="/calendar">Calendar</Link></li>
           <li><Link to="/what-we-do">What We Do</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/get-involved">Get Involved</Link></li>
+          {/* <li><Link to="/about">About</Link></li> */}
+          {/* <li><Link to="/get-involved">Get Involved</Link></li> */}
         </ul>
       </nav>
       <div className="navbar__search-donate">

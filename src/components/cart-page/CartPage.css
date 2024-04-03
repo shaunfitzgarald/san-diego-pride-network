@@ -1,6 +1,12 @@
 /* CartPage.css */
-
 .cart-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.cart-container {
+  /* flex: 1; */
   background: #f0f8ff; /* Light background for contrast, adjust as needed */
   max-width: 800px; /* Adjust based on your preference */
   margin: 40px auto;
@@ -10,7 +16,7 @@
   font-family: 'Open Sans', sans-serif; /* This should match your global font style */
 }
 
-.cart-page h1 {
+.cart-container h1 {
   font-family: 'Pacifico', cursive;
   text-align: center;
   color: #d63384; /* A vibrant color for the header */
@@ -58,7 +64,7 @@
 }
 
 /* If your cart is empty */
-.cart-page .empty-cart {
+.cart-container .empty-cart {
   text-align: center;
   font-size: 1.5rem;
   color: #a9a9a9;
@@ -67,7 +73,7 @@
 
 /* You may want to add media queries for responsiveness */
 @media (max-width: 768px) {
-  .cart-page {
+  .cart-container {
     padding: 10px;
   }
   
