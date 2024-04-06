@@ -33,6 +33,9 @@ function App() {
                 <HeroSection />
                 <CallToAction />
                 <FeaturedEvents />
+                <Tickets />
+                <Calendar />
+                <WhatWeDo />
                 {/* Additional components */}
               </>
             } />

@@ -12,7 +12,7 @@ const WhatWeDo = () => {
           to support and empower LGBTQ+ programs, focusing on marginalized groups within our vibrant tapestry - the youth, 
           people of color, transgender individuals, those living with HIV/AIDS, seniors, and more.
         </p>
-        <h2>Our Funding Focus</h2>
+        {/* <h2>Our Funding Focus</h2>
         <p>
           We direct our support to projects and organizations that align with our vision of justice and equality, 
           that endeavor to dismantle complex challenges faced at the intersectionality of various marginalized identities.
@@ -33,7 +33,7 @@ const WhatWeDo = () => {
           Need assistance with the application or have questions? Our Grants Writer, Nicole Vares, is available to help at  
           <a href="jason:grants@sandiegopridenetwork.org">
             grants@sandiegopridenetwork.org</a>.
-        </p>
+        </p> */}
       </div>
     </div>
   );
